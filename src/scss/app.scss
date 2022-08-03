@@ -1,0 +1,21 @@
+//Global Styles
+@import "global-styles/normalize";
+@import "global-styles/global";
+
+//Main Styles
+@import "main-styles/header";
+@import "main-styles/home";
+@import "main-styles/about";
+@import "main-styles/steps";
+@import "main-styles/products";
+@import "main-styles/faqs";
+@import "main-styles/contact";
+@import "main-styles/footer";
+@import "main-styles/scrollup";
+
+
+
+
+
+//Media Queries
+@import "media-queries/media-queries";

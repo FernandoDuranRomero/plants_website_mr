@@ -1,0 +1,86 @@
+.contact__container{
+    row-gap: 3.5rem;
+
+    button{
+        width: 12rem;
+    }
+}
+
+.contact__data{
+    display: grid;
+    row-gap: 2rem;
+}
+
+.contact__subtitle{
+    font-size: $normal-font-size;
+    font-weight: $font-medium;
+    color: var(--text-color);
+    margin-bottom: $mb-0-5;
+}
+
+.contact__description{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--title-color);
+    font-weight: $font-medium;
+}
+
+.contact__icon{
+    font-size: 1.25rem;
+}
+
+.contact__inputs{
+    display: grid;
+    row-gap: 2rem;
+    margin-bottom: $mb-2-5;
+}
+
+.contact__content{
+    position: relative;
+    height: 3rem;
+    border-bottom: .1rem solid var(--text-color-light);
+}
+
+.contact__input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+
+.contact__label{
+    position: absolute;
+    top: .75rem;
+    width: 100%;
+    font-size: $small-font-size;
+    color: var(--text-color-light);
+    transition: .3s;
+}
+
+.contact__area{
+    height: 7rem;
+
+    textarea{
+        resize: none;
+    }
+}
+
+.contact__input:focus + .contact__label{
+    top: -.75rem;
+    left: 0;
+    font-size: $small-font-size;
+    z-index: 10;
+}
+
+.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label{
+    top: -.75rem;
+    font-size: $small-font-size;
+    z-index: 10;
+}

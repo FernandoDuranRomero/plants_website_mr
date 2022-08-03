@@ -1,0 +1,196 @@
+//Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+//Variables
+:root{
+      //Colors
+    --hue: 152;
+    --first-color: hsl(var(--hue), 24%, 32%);
+    --first-color-alt: hsl(var(--hue), 24%, 28%);
+    --first-color-light: hsl(var(--hue), 24%, 66%);
+    --first-color-lighten: hsl(var(--hue), 24%, 92%);
+    --title-color: hsl(var(--hue), 4%, 15%);
+    --text-color: hsl(var(--hue), 4%, 35%);
+    --text-color-light: hsl(var(--hue), 4%, 55%);
+    --body-color: hsl(var(--hue), 0%, 100%);
+    --container-color: #fff;
+}
+
+//Header Height
+$header-height: 3.5rem;
+
+//Font and Typography
+$body-font: 'Poppins', sans-serif;
+$big-font-size: 2rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$smaller-font-size: .75rem;
+
+//Font Weight
+$font-medium: 500;
+$font-semi-bold: 600;
+
+//Margins
+$mb-0-5: .5rem;
+$mb-0-75: .75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+$mb-2-5: 2.5rem;
+
+//Z-Index
+$z-tooltip: 10;
+$z-fixed: 100;
+
+//Global Styles
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body, button, input, textarea{
+    font-family: $body-font;
+    font-size: $normal-font-size;
+}
+
+body{
+    margin: $header-height 0 0 0;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: .4s;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3{
+    color: var(--title-color);
+    font-weight: $font-semi-bold;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+//REUSABLE CLASSES
+.section{
+    padding: 5.5rem 0 1rem; 
+}
+
+.section__title, .section__title-center{
+    font-size: $h2-font-size;
+    margin-bottom: $mb-2;
+    line-height: 140%;
+}
+
+.section__title-center{
+    text-align: center;
+}
+
+.container{
+    max-width: 96.8rem;
+    margin-left: $mb-1-5;
+    margin-right: $mb-1-5;
+}
+
+.grid{
+    display: grid;
+}
+
+.main{
+    overflow: hidden;
+}
+
+.button{
+    display: inline-block;
+    width: 9rem;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: $font-medium;
+    transition: .3s;
+
+    &:hover{
+        background-color: var(--first-color-alt);
+    }
+}
+
+.button__icon{
+    transition: .3s;
+}
+
+.button:hover .button__icon{
+    transform: translateX(.25rem);
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.button--link{
+    color: var(--first-color);
+    font-weight: $font-medium;
+}
+
+.button--link:hover .button__icon{
+      transform: translateX(.25rem);
+}
+
+//Scroll Bar Custom
+::-webkit-scrollbar{
+    width: .6rem;
+    background: hsl(var(--hue), 4%, 53%);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: hsl(var(--hue), 4%, 29%);
+    border-radius: .5rem;
+}
+
+//Dark Theme Colors
+body.dark-theme{
+    --first-color-dark: hsl(var(--hue), 8%, 20%);
+    --title-color: hsl(var(--hue), 4%, 95%);
+    --text-color: hsl(var(--hue), 4%, 75%);
+    --body-color: hsl(var(--hue), 8%, 12%);
+    --container-color: hsl(var(--hue), 8%, 16%);
+}
+
+.dark-theme{
+    .steps__bg, .questions{
+        background-color: var(--first-color-dark);
+    }
+
+    .product__circle, .footer__suscribe{
+        background-color: var(--container-color);
+    }
+
+    #header{
+        &.scroll-header{
+            box-shadow: 0 .1rem .4rem hsla(var(--hue), 4%, 4%, .3);
+        }
+    }
+}
